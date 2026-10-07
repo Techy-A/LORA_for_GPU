@@ -1,0 +1,10 @@
+transformers==5.18.0
+accelerate
+peft
+bitsandbytes>=0.46
+mistral-common[audio]
+soundfile
+pandas
+pyarrow
+numpy
+tqdm

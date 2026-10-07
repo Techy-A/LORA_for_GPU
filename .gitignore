@@ -1,0 +1,5 @@
+.venv/
+data/
+__pycache__/
+artifacts/s5v_fold*.parquet
+artifacts/results.csv

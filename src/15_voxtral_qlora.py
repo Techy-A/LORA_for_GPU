@@ -33,7 +33,7 @@ from common import AMP, DATA, DTYPE, SR, crop_lengths, finetune_fold, fold_of, m
 
 MODEL, NAME, PREFIX = "mistralai/Voxtral-Mini-3B-2507", "s5v_voxtral_qlora", "s5v"
 CROP = 30 * SR   # one Voxtral audio chunk = 375 tokens
-EPOCHS, LR, BS = 3, 1e-4, 4
+EPOCHS, LR, BS = 3, 1e-4, 2   # batch 2: peak VRAM 7.5 GB at batch 4 on a T4, too close to 8 GB
 PROMPT = """You heard a 45-60 second spoken answer from an English test. Score the speaker's GRAMMAR: sentence
 structure, syntax, and grammatical accuracy and complexity. Fillers and self-corrections are normal in speech.
 

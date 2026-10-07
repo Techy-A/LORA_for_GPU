@@ -93,7 +93,7 @@ Keep the laptop plugged in, on the "Best performance" power mode, and stop it fr
   model; the audio encoder stays frozen.
 * Each clip is followed by the grammar rubric. The score head reads the middle layer: the mean over the audio tokens
   plus the last position, then a linear layer.
-* Trains on random 30 s crops for 3 epochs (learning rate 1e-4, head 1e-3, batch 4), speaker-grouped 5-fold
+* Trains on random 30 s crops for 3 epochs (learning rate 1e-4, head 1e-3, batch 2), speaker-grouped 5-fold
   cross-validation (`artifacts/folds.csv`), so the out-of-fold predictions are honest.
 * Validation clips are scored on fixed test-length crops; test clips are scored whole, in 30 s windows.
 

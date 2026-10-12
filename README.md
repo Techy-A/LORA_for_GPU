@@ -1,8 +1,14 @@
 # LoRA for GPU: Voxtral QLoRA fine-tuning (spoken grammar scoring)
 
+![Python](https://img.shields.io/badge/Python-3.11-3776AB?style=flat-square&logo=python&logoColor=white)
+![PyTorch](https://img.shields.io/badge/PyTorch%20CUDA%2012.8-EE4C2C?style=flat-square&logo=pytorch&logoColor=white)
+![PEFT](https://img.shields.io/badge/QLoRA%20%2F%20PEFT-2c9fbf?style=flat-square)
+![GPU](https://img.shields.io/badge/8%20GB%20GPU-76B900?style=flat-square&logo=nvidia&logoColor=white)
+
 Fine-tunes Voxtral-Mini-3B (an audio language model) to predict a 0-5 grammar score from a spoken English answer.
 The model is loaded in 4-bit (QLoRA), so it fits an 8 GB GPU such as an RTX 5060. Only small LoRA adapters and a
-linear score head are trained. The output is one file of predictions that gets blended with other models.
+linear score head are trained. The output is one file of predictions that gets blended with other models in
+[shl-grammar-scoring](https://github.com/Techy-A/shl-grammar-scoring), which placed 2nd on the competition's public leaderboard.
 
 ## What you need
 
@@ -108,3 +114,7 @@ Keep the laptop plugged in, on the "Best performance" power mode, and stop it fr
 | `src/15_voxtral_qlora.py` | The fine-tuning script |
 | `src/common.py` | Shared settings and training loop |
 | `artifacts/folds.csv` | The fixed speaker-grouped folds (do not change) |
+
+---
+
+<sub>Built by [Aryan Awasthi](https://github.com/Techy-A). ENC @ Thapar Institute of Engineering and Technology.</sub>
